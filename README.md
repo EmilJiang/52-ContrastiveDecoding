@@ -28,13 +28,25 @@ LICENSE: MIT License.
 .gitignore: Standard Python and Git ignore rules.
 
 # Re-implementation Details
-
+We kept our approach as true to the paper as possible, making the following adjustments to accomadate resource constraints:
+- Quantized OPT models, substituted OPT6.7B for OPT13B 
+- Smaller evaluation sample sizes (~100 prompts),
+- Dataset substitutions (PG-19 instead of BookCorpus ),
+- Using CD-Beam rather than CD-greedy decoding.
 
 # Reproduction Steps
 
-To reproduce our results, ensure you have access to a GPU (L4 or A100 recommended). Install dependencies and run the provided scripts in the code/ directory. 
+To reproduce our results, ensure you have access to a GPU (L4 or A100 recommended). Download or Google Colab file from the `code` directory, and run the cells in order. 
 
-*Note: that the experiments utilize approximately 500 Google Colab compute units and require specific 8-bit quantization to fit larger expert models on a single GPU
+*Note: GPT and OPT experiments cannot be run concurrently in the same session
+
+- Choose one model family to load
+- Double check that the correct model and hyperparmeters for the current model family are being referenced in each cell
+  - (tau = 0.5 for GPT, tau = 1 for OPT)
+- Run all code cells in order
+- Then load the other model family and repeat.
+
+*Note: Running all experiments utilizes approximately 500 Google Colab compute units on an A100 GPU.
 
 # Results/Insights
 Our repository reliably demonstrates the core behavior of Contrastive Decoding and provides a practical framework for reproducing and experimenting with the method. Users can expect:
@@ -42,10 +54,7 @@ Our repository reliably demonstrates the core behavior of Contrastive Decoding a
 - Evaluation pipelines for Diversity, Coherence, and MAUVE
 - Hyperparameter sweeps over α and model pairings
 
-While our overall trends aligned closely with the original results, some metric magnitudes (particularly MAUVE) were lower and more variable. We attribute this primarily to:
-- smaller evaluation sample sizes (~100 prompts),
-- dataset substitutions (PG-19 instead of BookCorpus),
-- using CD-Beam rather than CD-greedy decoding.
+While our overall trends aligned closely with the original results, some metric magnitudes (particularly MAUVE) were lower and more variable. We attribute this primarily changes we mentioned in `Re-implementation Details`
 
 # Conclusion
 We succesfully validated Contrastive Decoding's competitive performance against existing popular decoding methods and verified other design choices made by the paper.
