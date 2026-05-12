@@ -63,9 +63,11 @@ We succesfully validated Contrastive Decoding's competitive performance against 
 [1] Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsunori Hashimoto,
 Luke Zettlemoyer, and Mike Lewis. Contrastive decoding: Open-ended text generation as
 optimization, 2023.
+
 [2] Richa Gadgil. Combining large and small llms to boost inference time and qual-
 ity. https://towardsdatascience.com/combining-large-and-small-llms-for-inference-time-and-
 quality-boosts-1779b6b5100b/, December 2024. Towards Data Science.
+
 [3] OpenAI and Anthropic. Chatgpt and claude. Large language models used for understanding
 the paper, code inspiration, bug fixes, and optimizations.
 
