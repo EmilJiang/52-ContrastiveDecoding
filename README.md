@@ -4,9 +4,12 @@ This repository contains a project that attempts to re-implement the "Contrastiv
 # Chosen Result
 
 Our re-implementation focused on three key experiments from the original research:
-### Experiment 1: Comparing Contrastive Decoding (CD) to other sampling methods, which is the paper's primary objective.
-### Experiment 2: Studying the effect of relative model size on CD performance to determine optimal configurations.
-### Experiment 3: Validating the V_head plausibility constraint and diversity-coherence trade-off, confirming α=0.1 as the optimal threshold for balancing MAUVE scores with lexical variety.
+### Experiment 1: 
+Comparing Contrastive Decoding (CD) to other sampling methods, which is the paper's primary objective.
+### Experiment 2: 
+Studying the effect of relative model size on CD performance to determine optimal configurations.
+### Experiment 3: 
+Validating the V_head plausibility constraint and diversity-coherence trade-off, confirming α=0.1 as the optimal threshold for balancing MAUVE scores with lexical variety.
 
 # GitHub Contents
 
