@@ -60,11 +60,14 @@ While our overall trends aligned closely with the original results, some metric 
 We succesfully validated Contrastive Decoding's competitive performance against existing popular decoding methods and verified other design choices made by the paper.
 
 # References
-Xiang Lisa Li, et al. "Contrastive Decoding: Open-ended Text Generation as Optimization".
-
-Datasets: Wikitext-103, CC-News, and PG-19.
-
-Tools: SimCSE, Hugging Face Transformers, and bitsandbytes for 8-bit quantization
+[1] Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsunori Hashimoto,
+Luke Zettlemoyer, and Mike Lewis. Contrastive decoding: Open-ended text generation as
+optimization, 2023.
+[2] Richa Gadgil. Combining large and small llms to boost inference time and qual-
+ity. https://towardsdatascience.com/combining-large-and-small-llms-for-inference-time-and-
+quality-boosts-1779b6b5100b/, December 2024. Towards Data Science.
+[3] OpenAI and Anthropic. Chatgpt and claude. Large language models used for understanding
+the paper, code inspiration, bug fixes, and optimizations.
 
 # Acknowledgements
 Thank you to Professor Kilian Weinberger and Professor Wei-chiu Ma, as well as the course staff of CS4782 at Cornell University for supporting our education and completion of this project!
