@@ -30,9 +30,9 @@ LICENSE: MIT License.
 # Re-implementation Details
 We kept our approach as true to the paper as possible, making the following adjustments to accomadate resource constraints:
 - Quantized OPT models, substituted OPT6.7B for OPT13B 
-- Smaller evaluation sample sizes (~100 prompts),
-- Dataset substitutions (PG-19 instead of BookCorpus ),
-- Using CD-Beam rather than CD-greedy decoding.
+- Smaller evaluation sample sizes (~100 prompts)
+- Dataset substitutions (PG-19 instead of BookCorpus)
+- Used CD-greedy decoding instead of CD-Beam
 
 # Reproduction Steps
 
@@ -44,7 +44,7 @@ To reproduce our results, ensure you have access to a GPU (L4 or A100 recommende
 - Double check that the correct model and hyperparmeters for the current model family are being referenced in each cell
   - (tau = 0.5 for GPT, tau = 1 for OPT)
 - Run all code cells in order
-- Then load the other model family and repeat.
+- Then load the other model family and repeat
 
 *Note: Running all experiments utilizes approximately 500 Google Colab compute units on an A100 GPU.
 
