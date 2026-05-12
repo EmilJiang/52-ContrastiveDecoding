@@ -32,11 +32,23 @@ LICENSE: MIT License.
 
 # Reproduction Steps
 
-To reproduce our results, ensure you have access to a GPU (L4 or A100 recommended). Install dependencies and run the provided scripts in the code/ directory. Note that the experiments utilize approximately 500 Google Colab compute units and require specific 8-bit quantization to fit larger expert models on a single GPU
+To reproduce our results, ensure you have access to a GPU (L4 or A100 recommended). Install dependencies and run the provided scripts in the code/ directory. 
+
+*Note: that the experiments utilize approximately 500 Google Colab compute units and require specific 8-bit quantization to fit larger expert models on a single GPU
 
 # Results/Insights
+Our repository reliably demonstrates the core behavior of Contrastive Decoding and provides a practical framework for reproducing and experimenting with the method. Users can expect:
+- Reproducible CD experiments across GPT-2 and OPT families
+- Evaluation pipelines for Diversity, Coherence, and MAUVE
+- Hyperparameter sweeps over α and model pairings
+
+While our overall trends aligned closely with the original results, some metric magnitudes (particularly MAUVE) were lower and more variable. We attribute this primarily to:
+- smaller evaluation sample sizes (~100 prompts),
+- dataset substitutions (PG-19 instead of BookCorpus),
+- using CD-Beam rather than CD-greedy decoding.
 
 # Conclusion
+We succesfully validated Contrastive Decoding's competitive performance against existing popular decoding methods and verified other design choices made by the paper.
 
 # References
 Xiang Lisa Li, et al. "Contrastive Decoding: Open-ended Text Generation as Optimization".
@@ -46,3 +58,4 @@ Datasets: Wikitext-103, CC-News, and PG-19.
 Tools: SimCSE, Hugging Face Transformers, and bitsandbytes for 8-bit quantization
 
 # Acknowledgements
+Thank you to Professor Kilian Weinberger and Professor Wei-chiu Ma, as well as the course staff of CS4782 at Cornell University for supporting our education and completion of this project!
